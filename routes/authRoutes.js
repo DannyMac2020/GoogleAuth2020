@@ -4,7 +4,8 @@ module.exports = app => {
   app.get(
     '/auth/google',
     passport.authenticate('google', {
-      scope: ['profile', 'email']
+      scope: ['profile', 'email', "https://www.googleapis.com/auth/youtube.readonly","https://www.googleapis.com/auth/youtube"],
+      prompt: "select_account"
     })
   );
 

@@ -34,7 +34,7 @@ passport.use(
           const user = await new User({ googleId: profile.id }).save()
           done(null, user);
 
-          axios.get('https://www.googleapis.com/youtube/v3/channels', 
+          axios.get('https://https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true', 
   {
     headers: {
       Authorization: `Bearer ${my_users_access_token}`
